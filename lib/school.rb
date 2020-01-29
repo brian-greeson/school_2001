@@ -20,4 +20,10 @@ class School
     @hours_in_school_day >= 4
   end
 
+  def standard_student_names
+    standard_names = []
+    @student_names.each {|name| standard_names << name.capitalize}
+    standard_names
+  end
+
 end
