@@ -6,5 +6,17 @@ class School
     @student_names = []
   end
 
+  def add_student_name(name)
+    @student_names << name
+  end
+
+  def end_time
+
+
+   end_time = @hours_in_school_day.to_i + @start_time.to_i
+   end_time - 24 if end_time > 24
+   end_time.to_s + ":" + "00"
+
+  end
 
 end
