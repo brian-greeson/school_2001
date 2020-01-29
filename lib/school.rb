@@ -11,12 +11,19 @@ class School
   end
 
   def end_time
-
-
    end_time = @hours_in_school_day.to_i + @start_time.to_i
    end_time - 24 if end_time > 24
    end_time.to_s + ":" + "00"
+  end
 
+  def is_full_time?
+    @hours_in_school_day >= 4
+  end
+
+  def standard_student_names
+    standard_names = []
+    @student_names.each {|name| standard_names << name.capitalize}
+    standard_names
   end
 
 end
